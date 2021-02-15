@@ -35,6 +35,7 @@ namespace ChooseBot
                 vkApi.Authorize(new ApiAuthParams { AccessToken = Configuration["Config:AccessToken"] });
                 return vkApi;
             });
+            services.AddSingleton(sp => { return new StateService(); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
