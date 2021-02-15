@@ -27,7 +27,7 @@ namespace ChooseBot
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            services.AddControllers();
             services.AddSingleton<IVkApi>(sp =>
             {
                 var vkApi = new VkApi();
@@ -43,8 +43,6 @@ namespace ChooseBot
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseRouting();
 
             app.UseRouting();
 
