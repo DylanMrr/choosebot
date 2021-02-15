@@ -44,7 +44,7 @@ namespace ChooseBot.Controllers
                         {
                             RandomId = new DateTime().Millisecond,
                             PeerId = msg.PeerId.Value,
-                            Message = msg.Text
+                            Message = msg.Body
                         });
                         break;
                     }
