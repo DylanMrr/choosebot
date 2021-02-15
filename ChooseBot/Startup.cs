@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using VkNet;
 using VkNet.Abstractions;
 using VkNet.Model;
+using Newtonsoft.Json;
 
 namespace ChooseBot
 {
@@ -27,7 +28,7 @@ namespace ChooseBot
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
             services.AddSingleton<IVkApi>(sp =>
             {
                 var vkApi = new VkApi();
