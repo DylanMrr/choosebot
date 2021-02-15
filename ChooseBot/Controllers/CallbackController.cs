@@ -42,6 +42,7 @@ namespace ChooseBot.Controllers
 
                         _vkApi.Messages.Send(new MessagesSendParams
                         {
+                            UserId = msg.UserId,
                             RandomId = new DateTime().Millisecond,
                             PeerId = msg.PeerId.Value,
                             Message = msg.Body
