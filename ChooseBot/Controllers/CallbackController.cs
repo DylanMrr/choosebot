@@ -38,7 +38,7 @@ namespace ChooseBot.Controllers
                     return Ok(_configuration["Config:Confirmation"]);
                 case "message_new":
                     {
-                        var msg = Message.FromJson(new VkResponse(updates.Object);
+                        var msg = Message.FromJson(new VkResponse(updates.Object));
 
                         _vkApi.Messages.Send(new MessagesSendParams
                         {
