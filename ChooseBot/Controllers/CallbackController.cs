@@ -34,6 +34,14 @@ namespace ChooseBot.Controllers
             _stateService = stateService;
         }
 
+        /// <summary>
+        /// Метод для работы с ботом
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///     GET /api/callback
+        /// </remarks>
+        /// <response code="200"> Запрос выполнен</response>
         [HttpPost]
         public IActionResult Callback([FromBody] Updates updates)
         {
